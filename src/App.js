@@ -5,6 +5,8 @@ import { Header, Categories } from './components';
 import './scss/app.scss';
 
 function App() {
+  
+
   return (
     <div className="App">
       <div className="wrapper">
@@ -15,13 +17,15 @@ function App() {
         <div className="container">
           <div className="content__top">
 
-            <Categories items={[
-              'Мясные',
-              'Вегетарианская',
-              'Гриль',
-              'Острые',
-              'Закрытые'
-            ]} />
+            <Categories onClickItem={(item) => console.log(item)} 
+                        items={[
+                          'Мясные',
+                          'Вегетарианская',
+                          'Гриль',
+                          'Острые',
+                          'Закрытые'
+                        ]} 
+            />
 
             <div className="sort">
               <div className="sort__label">
